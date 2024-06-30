@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/hour_minus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/minus"
+            android:background="@null"
+            app:tint="#2B2B2B" />
+
+        <TextView
+            android:id="@+id/hour_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:padding="10dp"
+            android:textSize="25sp"/>
+
+        <ImageButton
+            android:id="@+id/hour_plus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/plus"
+            android:background="@null"
+            app:tint="#2B2B2B" />
+    </LinearLayout>
+
+</LinearLayout>
