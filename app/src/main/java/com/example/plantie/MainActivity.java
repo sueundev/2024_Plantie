@@ -2,6 +2,7 @@ package com.example.plantie;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private int manualValue = 0;
     private Button autoButton;
     private Button manualButton;
-
+    private Button fixButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         buttonBrightness_down = findViewById(R.id.btn_brightness_down);
         autoButton = findViewById(R.id.autoButton);
         manualButton = findViewById(R.id.manualButton);
+        fixButton = findViewById(R.id.fixButton);
 
         // 현재 날짜 설정
         String currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
@@ -109,6 +111,15 @@ public class MainActivity extends AppCompatActivity {
                 manualValue = 1;
                 Toast.makeText(MainActivity.this, "물주기!", Toast.LENGTH_SHORT).show();
                 manualValue = 0;
+            }
+        });
+
+        // 해결법 버튼 클릭 이벤트 처리
+        fixButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ChatBotActivity.class);
+                startActivity(intent);
             }
         });
     }
